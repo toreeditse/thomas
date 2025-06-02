@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <link rel="stylesheet" href="Style.css">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .slider {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .slides {
+      display: flex;
+      width: 300%;
+      animation: slide 15s infinite;
+    }
+
+    .slides img {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+    }
+
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      33% { transform: translateX(-100vw); }
+      66% { transform: translateX(-200vw); }
+      100% { transform: translateX(0); }
+    }
+
+    .overlay-content {
+      position: relative;
+      z-index: 1;
+      padding: 100px 20px;
+      color: white;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .overlay-content h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .overlay-content p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .top-bar, .main-navbar {
+      position: relative;
+      z-index: 2;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Background Slider -->
+<div class="slider">
+  <div class="slides">
+    <img src="iphones/Iphone11 pro max.jpg" alt="Slide 1">
+    <img src="samsung/Samsung_Galaxy_S19_Ultra.jpg" alt="Slide 2">
+    <img src="huawei/huawei nova 15.jpg" alt="Slide 3">
+  </div>
+</div>
+
+<!-- Top Promo Bar -->
+<div class="top-bar">
+  <p>📞 Free Shipping on all Hyperphones worldwide!</p>
+</div>
+
+<!-- Main Navigation Bar -->
+<nav class="main-navbar">
+  <div class="logo">NasCapital Mobile Hub</div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="collections.html">Collections</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="Order.html">Order & Delivery</a></li>
+    <li><a href="aboutUs.html">About</a></li>
+  </ul>
+</nav>
+
+<!-- About Content on Top of Slider -->
+<section class="overlay-content">
+  <h1>About NasCapital Mobile Hub</h1>
+  <p>
+    At NasCapital Mobile Hub, we celebrate the iconic charm of telecommunication history. From rotary dials to early push-button designs, each of our phones is a curated artifact, restored with love and style. Whether you're a collector or a nostalgic enthusiast, we deliver memories with every ring.
+  </p>
+</section>
+
+</body>
+</html>

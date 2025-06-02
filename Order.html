@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order & Delivery</title>
+  <link rel="stylesheet" href="Style.css">
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const params = new URLSearchParams(window.location.search);
+      const itemName = decodeURIComponent(params.get("item")) || "Unknown Item";
+      const priceList = {
+        "Rotary Desk Phone": 120,
+        "Colorful Wall Phone": 140,
+        "Push-Button Home Phone": 160,
+        "Futuristic Space Phone": 180
+      };
+      const itemPrice = priceList[itemName] || 0;
+
+      document.getElementById("item-name").textContent = itemName;
+      document.getElementById("price").textContent = `$${itemPrice}`;
+
+      const quantityInput = document.getElementById("quantity");
+      const totalOutput = document.getElementById("total");
+
+      function updateTotal() {
+        const quantity = parseInt(quantityInput.value) || 0;
+        const total = quantity * itemPrice;
+        totalOutput.textContent = `$${total}`;
+        document.getElementById("cart-summary").textContent = `${quantity} x ${itemName} = $${total}`;
+      }
+
+      quantityInput.addEventListener("input", updateTotal);
+      updateTotal();
+
+      const form = document.getElementById("order-form");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const name = document.getElementById("fullname").value;
+        const address = document.getElementById("address").value;
+        const email = document.getElementById("email").value;
+        const phone = document.getElementById("phone").value;
+        const quantity = parseInt(quantityInput.value) || 0;
+        const total = quantity * itemPrice;
+
+        alert(`Thank you, ${name}!\nYour order of ${quantity} x ${itemName} ($${total}) will be delivered to:\n${address}`);
+      });
+    });
+  </script>
+</head>
+<body>
+
+<!-- Top Promo Bar -->
+<div class="top-bar">
+  <p>📞 Free Shipping on all Hyperphones worldwide!</p>
+</div>
+
+<!-- Main Navigation Bar -->
+<nav class="main-navbar">
+  <div class="logo">NasCapital Mobile Hub</div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="collections.html">Collections</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="Order.html">Order & Delivery</a></li>
+    <li><a href="aboutUs.html">About</a></li>
+  </ul>
+  <div class="icons">
+    <a href="#"><i class="fas fa-search"></i></a>
+    <a href="#"><i class="fas fa-user"></i></a>
+    <a href="#"><i class="fas fa-shopping-cart"></i></a>
+  </div>
+</nav>
+<!-- Order & Delivery Section -->
+<section class="order-section">
+  <h2>Order & Delivery</h2>
+
+  <div class="order-details">
+    <div class="summary-row"><span>Item:</span> <span id="item-name">Loading...</span></div>
+    <div class="summary-row"><span>Price per unit:</span> <span id="price">P0.00</span></div>
+
+    <label for="quantity"><strong>Quantity:</strong></label>
+    <input type="number" id="quantity" value="1" min="1">
+
+    <div class="summary-row"><span>Total:</span> <span id="total">P0.00</span></div>
+  </div>
+
+  <div class="cart-box">
+    <h3>Cart Summary</h3>
+    <p id="cart-summary">No item selected.</p>
+  </div>
+
+  <form id="order-form" class="delivery-form">
+    <h3>Customer Details</h3>
+    <label for="fullname">Full Name:</label>
+    <input type="text" id="fullname" name="fullname" required>
+
+    <label for="address">Delivery Address:</label>
+    <textarea id="address" name="address" required></textarea>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <button type="submit">Place Order</button>
+  </form>
+</section>
+</body>
+</html>

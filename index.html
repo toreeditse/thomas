@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NasCapital Mobile Hub | Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+<!-- Top Promo Bar -->
+<div class="top-bar">
+  <p>📞 Free Shipping on all Hyperphones worldwide!</p>
+</div>
+
+<!-- Main Navigation Bar -->
+<nav class="main-navbar">
+  <div class="logo">NasCapital Mobile Hub</div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="collections.html">Collections</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="Order.html">Order & Delivery</a></li>
+    <li><a href="aboutUs.html">About</a></li>
+  </ul>
+ <div class="icon-bar">
+  <a href="#" onclick="toggleSearch()" title="Search"><i class="fa fa-search"></i></a>
+  <a href="about.html" title="Account"><i class="fa fa-user"></i></a>
+  <a href="shop.html" title="Shop"><i class="fa fa-shopping-cart"></i></a>
+</div>
+
+<!-- Search bar (initially hidden) -->
+<div id="search-box" style="display: none; margin-top: 10px;">
+  <input type="text" id="searchInput" placeholder="Search phones..." onkeyup="searchPhones()" style="padding: 5px; border-radius: 5px;">
+</div>
+
+</nav>
+
+<!-- Hero Section -->
+<header class="hero">
+  <div class="hero-content">
+    <h1>Redefining Modern Communication</h1>
+    <p>Explore the future with sleek,intelligent Hyperphones built for tomorrow.</p>
+    <a href="shop.html" class="btn-shop">Shop Now</a>
+  </div>
+</header>
+
+<!-- Featured Section -->
+<section class="featured">
+  <h2>Featured Phones</h2>
+  <div class="phone-grid">
+    <div class="phone-card">
+      <img src="samsung/Samsung_Galaxy_S22_Ultra.jpg" alt="Rotary Phone">
+      <h3>Samsung S22 Ultra</h3>
+      <p>2024's flagship redefined-power,style and innovation in your palm.</p>
+    </div>
+    <div class="phone-card">
+      <img src="iphones/Iphone16 pro max.jpg" alt="Wall Phone">
+      <h3>Iphone 16 Pro Max</h3>
+      <p>Cutting-edge perfomance meets sleek design-the future of Apple in your hands.</p>
+    </div>
+    <div class="phone-card">
+      <img src="huawei/huawei nova 9.jpg" alt="Desk Phone">
+      <h3>Huawei Nova Y70</h3>
+      <p>Smart, realiable and stylish- built for everyday performance with long lasting power.</p>
+    </div>
+  </div>
+</section>
+<script>
+  function toggleSearch() {
+    const box = document.getElementById('search-box');
+    box.style.display = box.style.display === 'none' ? 'block' : 'none';
+  }
+
+  function searchPhones() {
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    const phones = document.querySelectorAll('.phone-card');
+
+    phones.forEach(phone => {
+      const title = phone.querySelector('h3').textContent.toLowerCase();
+      phone.style.display = title.includes(input) ? 'block' : 'none';
+    });
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,222 @@
+body {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  background-color: #fefcf9;
+}
+
+.top-bar {
+  background-color: #f5f0e1;
+  text-align: center;
+  padding: 0.5rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+}
+
+.main-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1b1b1b;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #e2b887;
+}
+
+.icons a {
+  color: white;
+  margin-left: 1rem;
+  font-size: 1.2rem;
+}
+
+.hero {
+  background: url('phone\ store.jpg') no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-shop {
+  background-color: #e2b887;
+  padding: 0.75rem 1.5rem;
+  color: #1a1a1a;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn-shop:hover {
+  background-color: #d1a86f;
+}
+
+.featured {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.phone-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.phone-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  max-width: 250px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.phone-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.phone-card h3 {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+/* Base Styles */
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background: #f3f0e5;
+  color: #2d2d2d;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Headings */
+h2, h3 {
+  color: #5e412f;
+  font-family: 'Georgia', serif;
+  text-align: center;
+}
+
+/* Main Section Container */
+section.order-section {
+  max-width: 700px;
+  margin: 2rem auto;
+  background: #fff8f0;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Order Details Box */
+.order-details {
+  background: #fcf4e1;
+  border: 1px solid #ecd9c6;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+.order-details p,
+.order-details label {
+  font-size: 1rem;
+}
+
+/* Cart Summary Box */
+.cart-box {
+  background: #fff0dd;
+  border: 1px dashed #d4b483;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+.cart-box h3 {
+  margin-top: 0;
+}
+
+/* Form Styles */
+.delivery-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.delivery-form label {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.delivery-form input,
+.delivery-form textarea {
+  padding: 0.6rem;
+  margin-top: 0.3rem;
+  border: 1px solid #c5a880;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  background-color: #fffdf9;
+}
+
+.delivery-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Submit Button */
+button[type="submit"] {
+  margin-top: 1.5rem;
+  padding: 0.75rem;
+  background: #ff914d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background: #e87428;
+}
+.icon-bar a {
+  color: white;
+  margin-left: 15px;
+  font-size: 20px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.icon-bar a:hover {
+  color: #f0c040;
+}
